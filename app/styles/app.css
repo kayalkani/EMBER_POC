@@ -1,0 +1,9 @@
+.border-wrap{border: 1px solid #dedede;
+    margin: 1%;
+    padding: 1% 7%;
+    width: 20%;
+    float: left;}
+.iconContainer{width:83%;margin:0 auto;}
+.panel-default{margin-top:35%}
+.labelText{text-align: center;font-size: 20px;font-weight: bolder;}
+.panel-default{width:87%;}

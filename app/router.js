@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('iconHome', function() {
+   this.route('box',{path:':box_id'});
+  });
+  
 });
+
 
 export default Router;
