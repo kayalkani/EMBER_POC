@@ -13,7 +13,9 @@ export default Ember.Component.extend({
     
     store.values().then((response) => {
       this.set('contentData', response);
-      this.set('articleId', response);
+
+      this.set('articleId', response.sortBy('id'));
+      
     });        
   },   
   articleType:articleType,
