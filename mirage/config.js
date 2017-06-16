@@ -3,7 +3,7 @@ export default function() {
   this.get('/samplemodels1', function(db,request) {
   let idmodel=[
     {
-    id: '1',
+    id: 1,
     attributes: 
       {
         article: 'Article one',
@@ -11,7 +11,7 @@ export default function() {
         rating: 5
       }
     }, {
-    id: '2',
+    id: 2,
     attributes: 
       {
         article: 'Article two',
@@ -19,7 +19,7 @@ export default function() {
         rating: 1
       }
     }, {
-    id: '3',
+    id: 3,
     attributes: 
       {
         article: 'Article three',
@@ -28,7 +28,7 @@ export default function() {
       }
     },  
     {
-    id: '4',
+    id: 4,
     attributes: 
       {
         article: 'Article four',
@@ -37,7 +37,7 @@ export default function() {
       }
     },
      {
-    id: '5',
+    id: 5,
     attributes: 
       {
         article: 'Article five',
@@ -46,7 +46,7 @@ export default function() {
       }
     },
      {
-    id: '6',
+    id: 6,
     attributes: 
       {
         article: 'Article six',
@@ -54,7 +54,7 @@ export default function() {
         rating: 5
       }
     }, {
-    id: '7',
+    id: 7,
     attributes: 
       {
         article: 'Article seven',
@@ -62,7 +62,7 @@ export default function() {
         rating: 1
       }
     }, {
-    id: '8',
+    id: 8,
     attributes: 
       {
         article: 'Article eight',
@@ -71,7 +71,7 @@ export default function() {
       }
     },  
     {
-    id: '9',
+    id: 9,
     attributes: 
       {
         article: 'Article nine',
@@ -80,7 +80,7 @@ export default function() {
       }
     },
      {
-    id: '10',
+    id: 10,
     attributes: 
       {
         article: 'Article ten',
@@ -95,7 +95,9 @@ export default function() {
   if((dropdownId!=undefined)){
     let selectedVal = idmodel.filter(function(item){
       return item.id == dropdownId;
+
     });
+          
     return {data: selectedVal};
   }
   else if((dropdownType!=undefined)){
