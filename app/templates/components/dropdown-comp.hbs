@@ -1,0 +1,40 @@
+<div class="maincontent">
+<div class="row">
+  <div class="col-sm-6"> 
+    <span class="bolderClass">Filter by Type</span>
+    {{#power-select  options=articleType  selected=selected  placeholder="filter by type"  onchange=(action "changeOption")  as |types|}}
+    <span>{{types.type}}</span>
+    {{/power-select}}
+  </div>
+  <div class="col-sm-6">
+    <span class="bolderClass">Filter by Id</span>
+    {{#power-select  options=articleId  selected=selected  placeholder="Filter by id"  onchange=(action "changeOption")  as |ids|}}
+    <span>{{ids.id}}</span>
+    {{/power-select}}
+  </div>
+</div>
+<div class="clearfix"></div>  
+<div id="container">
+ 
+    {{#each contentData as |arcticle|}}
+
+      <h3>{{arcticle.title}}</h3>
+      <div class="well">
+          <div class="arcticle">
+            <span class="bolderClass">Article name:</span> {{arcticle.attributes.article}}
+          </div>
+          <div class="arcticle">
+            <span class="bolderClass">Type of artcile :</span> {{arcticle.attributes.type}}
+          </div>
+          <div class="arcticle">
+            <span class="bolderClass">Custromer rating:</span> {{arcticle.attributes.rating}}
+          </div>
+          <div class="arcticle">
+            <span class="bolderClass">Id of article:</span> {{arcticle.id}}
+          </div> 
+      </div>
+    {{/each}}
+  
+</div>
+ </div>
+{{yield}}
